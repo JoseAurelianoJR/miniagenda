@@ -1,0 +1,26 @@
+          <div id="desc">
+            <div class="body">
+              <div class="col w10 last">
+                <div class="content">
+                  <div class="shelf">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    <div class="inside">
+                      <div class="books">
+                        <% @contatos.each do |contato| %>
+                        <div class="col w2">
+                            <span><%=contato.nome%></span>
+                            <%= link_to image_tag("shelf_sample_image.png"), edit_contato_path(contato.id) %>
+                        </div>
+                        <% end %>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+<%= link_to image_tag("btnNovo.png"), new_contato_path %>
